@@ -12,7 +12,17 @@ const taskSchema = mongoose.Schema({
         default: false
     },
 
-    subTasks: [{
+    isRoot: {
+        type: Boolean,
+        required: true
+    },
+
+    parent: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Task'
+    },
+
+    children: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Task'
     }]
