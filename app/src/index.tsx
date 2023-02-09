@@ -5,6 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { TableViewPage, WSBViewPage } from 'pages';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ThemeProvider } from 'react-bootstrap';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -26,7 +29,7 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 
