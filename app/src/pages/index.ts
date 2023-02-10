@@ -1,4 +1,4 @@
-import TableViewPage  from "pages/TableView";
+import ListViewPage  from "pages/ListView";
 import WSBViewPage from "pages/WBSView";
 
-export { TableViewPage, WSBViewPage }
+export { ListViewPage, WSBViewPage }

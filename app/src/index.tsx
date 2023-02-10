@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-import { TableViewPage, WSBViewPage } from 'pages';
+import { ListViewPage, WSBViewPage } from 'pages';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from 'react-bootstrap';
+import ViewContainer from 'components/ViewContainer/ViewContainer';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,11 +16,11 @@ const root = ReactDOM.createRoot(
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <TableViewPage />
+    element: <ListViewPage />
   },
   {
-    path: '/table',
-    element: <TableViewPage />,
+    path: '/list',
+    element: <ListViewPage />,
   },
   {
     path: '/wsb',
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      <ViewContainer>
+        <RouterProvider router={router} />
+      </ViewContainer>
   </React.StrictMode>
 );
 

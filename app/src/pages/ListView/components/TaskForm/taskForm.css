@@ -1,0 +1,17 @@
+.form{
+    border: '1px lightgrey solid';
+    border-radius: '4px';
+    margin-bottom: '1em'
+}
+.input-icon{
+    background-color: 'white';
+    border: 'none';
+}
+
+.input-text{
+    border: none;
+}
+
+.input-text:focus{
+    border-color:#fff;
+}
