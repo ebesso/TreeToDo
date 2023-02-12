@@ -11,7 +11,7 @@ export default function TaskList(){
         <React.Fragment>
             <ListGroup>
                 {data.tasks.map((task, i) => 
-                    <ListGroup.Item style={i < data.tasks.length - 1 ? {borderWidth: '0 0 1px 0'} : {border: 'none'}}>
+                    <ListGroup.Item style={{borderWidth: '0 0 1px 0'}}>
                         <TaskItem name={task.name} isCompleted={task.isCompleted} />
                     </ListGroup.Item>
                 )}

@@ -6,8 +6,8 @@ import { ListViewPage, WSBViewPage } from 'pages';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ThemeProvider } from 'react-bootstrap';
 import ViewContainer from 'components/ViewContainer/ViewContainer';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

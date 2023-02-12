@@ -2,30 +2,25 @@ import React, { useState } from "react"
 
 import TaskList from "pages/ListView/components/TaskList/TaskList"
 import TaskForm from "pages/ListView/components/TaskForm/TaskForm"
-import Settings from 'pages/ListView/components/Settings/Settings'
+import Path from 'pages/ListView/components/Path/Path'
 
 import { Row, Col } from "react-bootstrap"
 
 export default function TableViewPage(){
 
-    const [showSettings, setShowSettings] = useState<Boolean>(true);
+    const path = ['Root', 'Quiz', 'Read']
 
     return (
         <React.Fragment>
             <Row>
 
-                <Col md={ showSettings ? 8 : 12}>
-                    <h1 style={{marginBottom: '0.5em'}}>ToDo</h1>
-
-                    <TaskForm />
+                <Col md={12}>
+                    <Path path={path} />
+                    <hr style={{marginBottom: '0.5em', marginTop: '0'}}/>
                     <TaskList />
-                </Col>
-                {showSettings && 
-                    <Col md={4}>
-                        <Settings />
-                    </Col>
-                }
+                    <TaskForm />
 
+                </Col>
             </Row>
 
         </React.Fragment>
